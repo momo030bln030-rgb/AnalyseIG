@@ -1,8 +1,18 @@
 import requests
 import json
 import re
+import sys
+import os
 from datetime import datetime
 from bs4 import BeautifulSoup
+
+# Importiere Sentiment Analyzer falls verfügbar
+try:
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', 'lib'))
+    from sentiment_analyzer import SentimentAnalyzer, analyze_comments_sentiment
+    SENTIMENT_AVAILABLE = True
+except ImportError:
+    SENTIMENT_AVAILABLE = False
 
 class InstagramFullScraper:
     """
@@ -21,7 +31,12 @@ class InstagramFullScraper:
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
             'Accept-Language': 'de-DE,de;q=0.9',
         })
+        self.sentiment_analyzer = SentimentAnalyzer() if SENTIMENT_AVAILABLE else None
         print("[OK] Instagram Full Scraper initialisiert")
+        if SENTIMENT_AVAILABLE:
+            print("[OK] Sentiment Analyzer verfügbar")
+        else:
+            print("[i] Sentiment Analyzer nicht verfügbar (optional)")
         
     def get_profile_data(self, username):
         """Holt ALLE öffentlichen Profildaten"""
@@ -150,6 +165,16 @@ class InstagramFullScraper:
                         'timestamp': int(timestamps[i]) if i < len(timestamps) else 0,
                         'date': datetime.fromtimestamp(int(timestamps[i])).strftime('%d.%m.%Y %H:%M') if i < len(timestamps) else 'N/A',
                     }
+                    
+                    # Sentiment-Analyse falls verfügbar
+                    if self.sentiment_analyzer and texts[i]:
+                        sentiment = self.sentiment_analyzer.analyze(texts[i])
+                        comment['sentiment'] = sentiment['sentiment']
+                        comment['sentiment_score'] = sentiment['score']
+                        comment['sentiment_polarity'] = sentiment['polarity']
+                        comment['emotion'] = sentiment['emotion']
+                        comment['sentiment_confidence'] = sentiment['confidence']
+                    
                     comments.append(comment)
                 except:
                     continue

@@ -241,11 +241,12 @@ class MainMenu:
         print("[3] TikTok")
         print("[4] Pinterest")
         print("[5] Tumblr")
-        print("[6] Konfiguration bearbeiten")
-        print("[7] Beenden")
+        print("[6] OSINT Tools (erweiterte Analyse)")
+        print("[7] Konfiguration bearbeiten")
+        print("[8] Beenden")
         print("\n" + "-"*80)
         
-        choice = input("Wähle eine Option (1-7): ").strip()
+        choice = input("Wähle eine Option (1-8): ").strip()
         return choice
     
     def instagram_menu(self):
@@ -582,6 +583,44 @@ class MainMenu:
         
         print(f"[OK] Konfiguration erstellt: {config_file}")
     
+    def osint_menu(self):
+        """OSINT Tools Menü"""
+        print("\n" + "="*80)
+        print("OSINT TOOLS - ERWEITERTE ANALYSE".center(80))
+        print("="*80)
+        print("\n[1] Instagram Kommentar-Tiefanalyse")
+        print("[2] Sentiment-Analyse auf Kommentaren")
+        print("[3] Reverse Username Search")
+        print("[4] Spam-Detektor")
+        print("[5] Comment Pattern Analyse")
+        print("[6] Export & Reporting")
+        print("[7] Zurück")
+        print("\n" + "-"*80)
+        
+        choice = input("Wähle Tool (1-7): ").strip()
+        
+        if choice == '1':
+            # Instagram Kommentar-Tiefanalyse
+            osint_script = os.path.join(INSTAGRAM_DIR, 'instagram_osint.py')
+            if os.path.exists(osint_script):
+                print("\n[*] Starte Instagram OSINT Tools...")
+                try:
+                    runpy.run_path(osint_script, run_name='__main__')
+                except Exception as e:
+                    print(f"[!] Fehler: {e}")
+            else:
+                print(f"[!] OSINT Tools nicht gefunden")
+        
+        elif choice in ['2', '3', '4', '5', '6']:
+            print("[i] Diese Features sind noch in Entwicklung")
+            print("[*] Verwende die Kommentar-Tiefanalyse (Option 1) für Sentiment & Patterns")
+        
+        elif choice == '7':
+            return
+        
+        else:
+            print("[!] Ungültige Auswahl")
+    
     def run(self):
         """Hauptprogrammschleife"""
         while self.running:
@@ -662,6 +701,10 @@ class MainMenu:
                         self.run_tumblr_tool(sub_choice)
             
             elif choice == '6':
+                # OSINT Tools
+                self.osint_menu()
+            
+            elif choice == '7':
                 # Konfiguration
                 while True:
                     config_choice = self.config_menu()
@@ -681,7 +724,7 @@ class MainMenu:
                     else:
                         print("[!] Ungültige Auswahl")
             
-            elif choice == '7':
+            elif choice == '8':
                 # Beenden
                 print("\n[*] Programm beendet.")
                 self.running = False
