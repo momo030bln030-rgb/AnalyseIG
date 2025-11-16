@@ -1,0 +1,53 @@
+# Python Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtuelle Umgebung
+.venv/
+venv/
+ENV/
+
+# Berichte und generierte Daten
+*_FULL_REPORT.json
+*_ADVANCED_REPORT.json
+*_REPORT.json
+*.log
+*.tmp
+*.out
+
+# Konfigurationsdateien mit Zugangsdaten
+config*.json
+*.env
+*.secrets
+*.token
+*.key
+*.password
+*.credentials
+
+# Sonstige generierte Dateien
+*.sqlite3
+*.db
+*.bak
+*.cache
+
+# Systemdateien
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Sonstige
+*.xlsx
+*.csv
+*.zip
+*.tar
+*.gz
+
+# Ausschluss von Login-Daten
+login_*.json
+login_*.txt
+login_*.py
