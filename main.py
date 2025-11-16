@@ -14,11 +14,12 @@ from datetime import datetime
 
 # Verzeichnis-Struktur
 MAIN_DIR = os.path.dirname(os.path.abspath(__file__))
-INSTAGRAM_DIR = os.path.join(MAIN_DIR, 'instagram')
-FACEBOOK_DIR = os.path.join(MAIN_DIR, 'facebook')
-THREADS_DIR = os.path.join(MAIN_DIR, 'tiktok')
-PINTEREST_DIR = os.path.join(MAIN_DIR, 'pinterest')
-TUMBLR_DIR = os.path.join(MAIN_DIR, 'tumblr')
+PLATFORMS_DIR = os.path.join(MAIN_DIR, 'platforms')
+INSTAGRAM_DIR = os.path.join(PLATFORMS_DIR, 'instagram')
+FACEBOOK_DIR = os.path.join(PLATFORMS_DIR, 'facebook')
+THREADS_DIR = os.path.join(PLATFORMS_DIR, 'tiktok')
+PINTEREST_DIR = os.path.join(PLATFORMS_DIR, 'pinterest')
+TUMBLR_DIR = os.path.join(PLATFORMS_DIR, 'tumblr')
 CONFIG_DIR = os.path.join(MAIN_DIR, 'config')
 LIB_DIR = os.path.join(MAIN_DIR, 'lib')
 
