@@ -1,0 +1,9 @@
+{
+  "workspace": "..",
+  "report_dir": "..",
+  "iterations": 1,
+  "targets": [
+    { "label": "Instagram Complete (sample)", "script": "instagram/ig_complete.py", "args": [] },
+    { "label": "Facebook Analyzer (sample)", "script": "facebook/facebook_analyzer.py", "args": [] }
+  ]
+}
