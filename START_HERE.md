@@ -198,6 +198,15 @@ reverse_results = scraper.reverse_image_search(image_url)
 scraper = AdvancedFacebookScraper(use_delays=True)  # 2-5 Sek. Delays
 ```
 
+---
+
+## **Repository & Release**
+
+- **Repository URL:** `https://github.com/momo030bln030-rgb/AnalyseIG.git`
+- **Aktuelles Release:** `v0.1.0` (Erstellt: 2025-11-16)
+
+Änderungen, Release-Notes und Historie findest du in `CHANGELOG.md`.
+
 ### Mit Proxy
 ```python
 proxy = {'http': 'http://proxy.example.com:8080'}
