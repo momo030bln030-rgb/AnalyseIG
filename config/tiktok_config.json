@@ -1,0 +1,21 @@
+{
+  "platform": "tiktok",
+  "description": "TikTok Scraper Konfiguration",
+  "created": "2025-11-16",
+  "settings": {
+    "timeout": 10,
+    "retries": 3,
+    "save_reports": true,
+    "report_dir": "./",
+    "target_username": "example_user",
+    "max_videos": 20,
+    "get_comments": true,
+    "get_likes": true,
+    "generate_full_report": true
+  },
+  "output": {
+    "format": "json",
+    "filename_pattern": "{username}_tiktok_FULL_REPORT.json"
+  },
+  "note": "TikTok Scraper wird noch entwickelt"
+}

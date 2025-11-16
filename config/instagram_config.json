@@ -1,0 +1,22 @@
+{
+  "platform": "instagram",
+  "description": "Instagram Scraper Konfiguration",
+  "created": "2025-11-16",
+  "settings": {
+    "timeout": 10,
+    "retries": 3,
+    "save_reports": true,
+    "report_dir": "./",
+    "target_username": "cristiano",
+    "max_posts": 30,
+    "get_comments": true,
+    "get_likes": true,
+    "get_hashtags": true,
+    "get_mentions": true,
+    "generate_full_report": true
+  },
+  "output": {
+    "format": "json",
+    "filename_pattern": "{username}_FULL_REPORT.json"
+  }
+}

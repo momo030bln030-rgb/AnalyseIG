@@ -1,0 +1,24 @@
+{
+  "platform": "facebook",
+  "description": "Facebook Analyzer Konfiguration",
+  "created": "2025-11-16",
+  "settings": {
+    "timeout": 10,
+    "retries": 3,
+    "save_reports": true,
+    "report_dir": "./",
+    "search_name": "John Doe",
+    "search_location": null,
+    "get_posts": true,
+    "get_comments": true,
+    "get_deleted_analysis": true,
+    "max_search_results": 20,
+    "max_posts": 20,
+    "max_comments": 20,
+    "generate_full_report": true
+  },
+  "output": {
+    "format": "json",
+    "filename_pattern": "facebook_{profile_id}_FULL_REPORT.json"
+  }
+}
