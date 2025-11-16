@@ -21,28 +21,28 @@
 
 ## 🚀 SCHNELLSTART
 
-### Instagram - Posts & Kommentare abrufen
+### Hauptmenü (empfohlen)
 ```bash
 cd c:\Users\MoMo-Bln\Downloads\Music\ig
-python ig_complete.py
+python main.py
 ```
-**Dann ändern (Zeile ~365):**
-```python
-target_username = "cristiano"  # Dein Ziel-Account
+- Wähle Plattform aus
+- Wähle Tool
+- Starte!
+
+### Instagram - Posts & Kommentare abrufen
+```bash
+python platforms/instagram/ig_complete.py
 ```
 
 ### Facebook - Profil suchen & analysieren
 ```bash
-python facebook_analyzer.py
-```
-**Dann ändern (Zeile ~470):**
-```python
-search_name = "Max Mueller"  # Name zum Suchen
+python platforms/facebook/facebook_analyzer.py
 ```
 
 ### Facebook - FORTGESCHRITTENE ANALYSE
 ```bash
-python facebook_advanced_scraper.py
+python platforms/facebook/facebook_advanced_scraper.py
 ```
 **Nutzt:**
 - Archive.org (gelöschte Inhalte)

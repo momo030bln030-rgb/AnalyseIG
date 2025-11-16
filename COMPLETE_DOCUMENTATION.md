@@ -88,27 +88,24 @@ QUICK_START_GUIDE.md (7 KB)
 
 ## 🚀 QUICK START
 
-### 1️⃣ Instagram analysieren
+### 1️⃣ Hauptmenü starten (empfohlen)
 ```bash
-python ig_complete.py
-```
-**Ändern (Zeile 365):**
-```python
-target_username = "instagram"  # Dein Account
+python main.py
 ```
 
-### 2️⃣ Facebook-Profil suchen
+### 2️⃣ Instagram analysieren (direkt)
 ```bash
-python facebook_analyzer.py
-```
-**Ändern (Zeile 470):**
-```python
-search_name = "Max Mueller"  # Name zum Suchen
+python platforms/instagram/ig_complete.py
 ```
 
-### 3️⃣ Fortgeschrittene Facebook-Analyse
+### 3️⃣ Facebook-Profil suchen
 ```bash
-python facebook_advanced_scraper.py
+python platforms/facebook/facebook_analyzer.py
+```
+
+### 4️⃣ Fortgeschrittene Facebook-Analyse
+```bash
+python platforms/facebook/facebook_advanced_scraper.py
 ```
 - Nutzt Archive.org
 - Google Cache
@@ -339,7 +336,7 @@ report = scraper.generate_full_report("nike")
 
 ### Fallstudie 2: Gelöschtes Facebook-Profil wiederherstellen
 ```python
-from facebook_advanced_scraper import AdvancedFacebookScraper
+from platforms.facebook.facebook_advanced_scraper import AdvancedFacebookScraper
 
 scraper = AdvancedFacebookScraper()
 report = scraper.analyze_profile_advanced("deleted_user")

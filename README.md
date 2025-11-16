@@ -16,21 +16,37 @@ pip install requests beautifulsoup4
 
 ## Verwendung
 
-### Version 1: Originales Skript (`ig.py`)
+### Option 1: Interaktives Menü (empfohlen)
 ```bash
-python ig.py
+python main.py
+```
+Hauptmenü mit Optionen für alle Plattformen.
+
+### Option 2: Spezifische Tools
+
+**Instagram Version 1 - Original (`ig.py`):**
+```bash
+python platforms/instagram/ig.py
 ```
 - Verwendet Web-Scraping und Regex-Extraktion
 - Braucht keine Authentifizierung
 - Funktioniert für öffentliche Profile
 
-### Version 2: Verbesserte Version (`ig_working.py`)
+**Instagram Version 2 - Verbessert (`ig_working.py`):**
 ```bash
-python ig_working.py
+python platforms/instagram/ig_working.py
 ```
 - Besseres Error-Handling
 - Detaillierte Reports
 - Speichert Ergebnisse als JSON
+
+**Instagram Version 3 - Complete (`ig_complete.py`):**
+```bash
+python platforms/instagram/ig_complete.py
+```
+- Umfassende Profile & Posts
+- Advanced Datenextraktion
+- Beste Ergebnisse
 
 ## Was wird extrahiert?
 
@@ -46,7 +62,7 @@ python ig_working.py
 ## Beispiel
 
 ```python
-from ig_working import InstagramInvestigator
+from platforms.instagram.ig_working import InstagramInvestigator
 
 investigator = InstagramInvestigator()
 report = investigator.generate_full_report("instagram")

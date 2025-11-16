@@ -274,11 +274,14 @@ with ThreadPoolExecutor(max_workers=5) as executor:
 ## 🎓 TUTORIAL - PROFIL ANALYSIEREN
 
 ```bash
-# 1. Skript starten
-python facebook_analyzer.py
+# 1. Hauptmenü starten (empfohlen)
+python main.py
+→ Wähle Facebook
+→ Wähle Analyzer oder Advanced Tool
+→ Starten!
 
-# 2. Im Code ändern:
-search_name = "Max Mueller"  # Suche nach Name
+# 2. Oder direkt
+python platforms/facebook/facebook_analyzer.py
 
 # 3. Output:
 # - facebook_USER_FULL_REPORT.json (Report)
@@ -287,6 +290,7 @@ search_name = "Max Mueller"  # Suche nach Name
 # - Gelöschte Inhalte Analysis
 
 # 4. Weitere Analysen
+from platforms.facebook.facebook_analyzer import FacebookProfileAnalyzer
 analyzer = FacebookProfileAnalyzer()
 profiles = analyzer.search_person("Max Mueller")
 for profile in profiles:

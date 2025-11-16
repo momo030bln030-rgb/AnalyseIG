@@ -11,40 +11,63 @@ Ein **komplettes, produktionsreifes Toolkit** zum Analysieren von Instagram- und
 ```
 c:\Users\MoMo-Bln\Downloads\Music\ig\
 
-[PYTHON SCRIPTS - 6 Dateien]
-├── ig.py                        (12 KB) - Original Instagram Login-Scraper
-├── ig_working.py                (12 KB) - Basis Instagram Scraper
-├── ig_complete.py               (18 KB) ⭐ INSTAGRAM HAUPTTOOL
-├── ig_full_scraper.py           (18 KB) - Alternative Vollversion
-├── facebook_analyzer.py          (23 KB) ⭐ FACEBOOK HAUPTTOOL
-└── facebook_advanced_scraper.py  (15 KB) ⭐ FACEBOOK ADVANCED
+[PLATTFORMEN - platforms/]
+├── instagram/
+│   ├── ig.py                    (12 KB) - Original Instagram Login-Scraper
+│   ├── ig_working.py            (12 KB) - Basis Instagram Scraper
+│   ├── ig_complete.py           (18 KB) ⭐ INSTAGRAM HAUPTTOOL
+│   └── ig_full_scraper.py       (18 KB) - Alternative Vollversion
+├── facebook/
+│   ├── facebook_analyzer.py      (23 KB) ⭐ FACEBOOK HAUPTTOOL
+│   └── facebook_advanced_scraper.py (15 KB) ⭐ FACEBOOK ADVANCED
+├── tiktok/
+├── pinterest/
+├── tumblr/
+└── threads/
 
-[DOKUMENTATION - 4 Dateien]
-├── COMPLETE_DOCUMENTATION.md    (11 KB) - Vollständige Doku
-├── FACEBOOK_ANLEITUNG.md         (7 KB) - Detaillierte FB-Anleitung
-├── QUICK_START_GUIDE.md          (7 KB) - Schnellstart Beispiele
-└── README.md                     (2 KB) - Überblick
+[KONFIGURATION & INFRASTRUKTUR]
+├── config/
+│   ├── instagram_config.json
+│   ├── facebook_config.json
+│   ├── tiktok_config.json
+│   ├── pinterest_config.json
+│   └── tumblr_config.json
+├── lib/
+│   ├── tracing_setup.py
+│   ├── tracing_helper.py
+│   └── run_traced.py
+├── evaluation/
+├── main.py                      ⭐ HAUPTMENÜ
+└── CHANGELOG.md
 
-TOTAL: 130+ KB Production-Ready Code
+TOTAL: 130+ KB Production-Ready Code + Infrastruktur
 ```
 
 ---
 
 ## 🚀 SCHNELLSTART (2 MINUTEN)
 
-### Instagram Posts analysieren:
+### Option 1: Interaktives Menü (empfohlen)
 ```bash
-python instagram/ig_complete.py
+python main.py
+```
+Wähle Plattform → Tool → Starten!
+
+### Option 2: Direkte Ausführung
+
+**Instagram Posts analysieren:**
+```bash
+python platforms/instagram/ig_complete.py
 ```
 
-### Facebook-Profil suchen:
+**Facebook-Profil suchen:**
 ```bash
-python facebook/facebook_analyzer.py
+python platforms/facebook/facebook_analyzer.py
 ```
 
-### Facebook mit Umgehungstechniken:
+**Facebook mit Umgehungstechniken:**
 ```bash
-python facebook/facebook_advanced_scraper.py
+python platforms/facebook/facebook_advanced_scraper.py
 ```
 
 ---
@@ -140,23 +163,27 @@ python facebook/facebook_advanced_scraper.py
 pip install requests beautifulsoup4
 ```
 
-### 2. Profil-Parameter anpassen
+### 2. Konfigurationen anpassen (optional)
 
-**Instagram (ig_complete.py - Zeile ~365):**
-```python
-target_username = "cristiano"  # Ändere zu deinem Account
+Benutze das interaktive Menü:
+```bash
+python main.py
+→ [6] Konfiguration bearbeiten
 ```
 
-**Facebook (facebook_analyzer.py - Zeile ~470):**
-```python
-search_name = "Max Mueller"  # Name zum Suchen
-```
+Oder bearbeite JSON-Dateien direkt im `config/`-Ordner:
+- `instagram_config.json` - Instagram-Einstellungen
+- `facebook_config.json` - Facebook-Einstellungen
+- Weitere für TikTok, Pinterest, Tumblr
 
 ### 3. Starten
 ```bash
-python ig_complete.py
-# oder
-python facebook_analyzer.py
+# Empfohlen: Hauptmenü
+python main.py
+
+# Oder direkt ein Tool
+python platforms/instagram/ig_complete.py
+python platforms/facebook/facebook_analyzer.py
 ```
 
 **Ergebnis:** `username_FULL_REPORT.json` wird erstellt
