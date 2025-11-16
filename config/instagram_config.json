@@ -1,7 +1,6 @@
 {
   "platform": "instagram",
-  "description": "Instagram Scraper Konfiguration",
-  "created": "2025-11-16",
+  "created": "2025-11-16T14:01:11.033111",
   "settings": {
     "timeout": 10,
     "retries": 3,

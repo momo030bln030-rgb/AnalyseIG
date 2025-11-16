@@ -1,7 +1,6 @@
 {
   "platform": "facebook",
-  "description": "Facebook Analyzer Konfiguration",
-  "created": "2025-11-16",
+  "created": "2025-11-16T14:01:11.035168",
   "settings": {
     "timeout": 10,
     "retries": 3,
