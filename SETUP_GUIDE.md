@@ -1,4 +1,4 @@
-# Setup-Assistent für ANALYSE IG
+# Setup-Assistent für Social Media Analyse Tool J+C
 
 ## Überblick
 
@@ -56,7 +56,7 @@ Sie können die folgenden Grundeinstellungen konfigurieren:
 
 ## Konfigurationsdateien
 
-Nach dem Setup finden Sie die erstellten Konfigurationsdateien im `config/`-Verzeichnis:
+Nach dem Setup finden Sie die erstellten Konfigurationsdateien im `Social Media Analyse Tool J+C/config/`-Verzeichnis:
 
 ```
 config/
@@ -102,7 +102,7 @@ Sie können Konfigurationsdateien jederzeit bearbeiten:
 3. Wählen Sie die Plattform, deren Konfiguration Sie bearbeiten möchten
 4. Die Datei öffnet sich im Standard-Editor
 
-Oder bearbeiten Sie die JSON-Dateien direkt im `config/`-Verzeichnis mit einem Texteditor.
+Oder bearbeiten Sie die JSON-Dateien direkt im `Social Media Analyse Tool J+C/config/`-Verzeichnis mit einem Texteditor.
 
 ## Automatische Erstellung von Konfigurationen
 

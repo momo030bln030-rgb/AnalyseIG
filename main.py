@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-ANALYSE IG - Hauptmenü
+Social Media Analyse Tool J+C - Hauptmenü
 Instagram, Facebook, Threads & TikTok Scraper mit Konfiguration
 ================================================================================
 """
@@ -20,7 +20,9 @@ FACEBOOK_DIR = os.path.join(PLATFORMS_DIR, 'facebook')
 THREADS_DIR = os.path.join(PLATFORMS_DIR, 'tiktok')
 PINTEREST_DIR = os.path.join(PLATFORMS_DIR, 'pinterest')
 TUMBLR_DIR = os.path.join(PLATFORMS_DIR, 'tumblr')
-CONFIG_DIR = os.path.join(MAIN_DIR, 'config')
+# Konfigurationen und generierte Dateien liegen jetzt im Projekt-Unterordner
+PROJECT_SUBDIR = 'Social Media Analyse Tool J+C'
+CONFIG_DIR = os.path.join(MAIN_DIR, PROJECT_SUBDIR, 'config')
 LIB_DIR = os.path.join(MAIN_DIR, 'lib')
 
 # Ensure lib ist im sys.path
@@ -32,7 +34,7 @@ class SetupWizard:
     
     def __init__(self):
         print("\n" + "="*80)
-        print("WILLKOMMEN BEI ANALYSE IG - SETUP-ASSISTENT".center(80))
+        print("WILLKOMMEN BEI Social Media Analyse Tool J+C - SETUP-ASSISTENT".center(80))
         print("="*80 + "\n")
         print("Es wurden keine Konfigurationen gefunden.")
         print("Lass uns die wichtigsten Einstellungen konfigurieren!\n")
@@ -226,7 +228,7 @@ class MainMenu:
     def __init__(self):
         self.running = True
         print("\n" + "="*80)
-        print("ANALYSE IG - Hauptmenü".center(80))
+        print("Social Media Analyse Tool J+C - Hauptmenü".center(80))
         print("="*80 + "\n")
     
     def show_menu(self):
@@ -502,7 +504,7 @@ class MainMenu:
         print("="*80)
         
         if not os.path.exists(CONFIG_DIR):
-            print("\n[i] config/ Verzeichnis nicht vorhanden")
+            print("\n[i] Social Media Analyse Tool J+C/config/ Verzeichnis nicht vorhanden")
             return
         
         configs = [f for f in os.listdir(CONFIG_DIR) if f.endswith('.json')]

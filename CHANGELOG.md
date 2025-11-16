@@ -10,7 +10,7 @@
 
 
 ## Notes
-- Major reorganization: platform folders (`instagram/`, `facebook/`, `tiktok/`, `pinterest/`, `tumblr/`), `lib/`, `config/` and interactive `main.py` with setup assistant.
+- Major reorganization: platform folders (`instagram/`, `facebook/`, `tiktok/`, `pinterest/`, `tumblr/`), `lib/`, `Social Media Analyse Tool J+C/config/` and interactive `main.py` with setup assistant.
 - Added OpenTelemetry tracing helpers and `run_traced.py` in `lib/` (safe fallback when packages missing).
 - Created initial config templates and `SETUP_GUIDE.md`.
 - Created `CHANGELOG.md` and tagged release `v0.1.0`.

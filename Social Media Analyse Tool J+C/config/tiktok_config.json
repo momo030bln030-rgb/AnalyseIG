@@ -1,0 +1,20 @@
+{
+  "platform": "tiktok",
+  "created": "2025-11-16T14:01:11.037312",
+  "settings": {
+    "timeout": 10,
+    "retries": 3,
+    "save_reports": true,
+    "report_dir": "./Social Media Analyse Tool J+C/reports",
+    "target_username": "example_user",
+    "max_videos": 20,
+    "get_comments": true,
+    "get_likes": true,
+    "get_shares": true,
+    "generate_full_report": true
+  },
+  "output": {
+    "format": "json",
+    "filename_pattern": "{username}_tiktok_FULL_REPORT.json"
+  }
+}

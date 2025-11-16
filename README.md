@@ -1,6 +1,6 @@
-# Instagram Profile Investigator
+# Social Media Analyse Tool J+C
 
-Ein Python-Skript zum Abrufen von Instagram-Profildaten ohne Authentifizierung.
+Ein Sammlung von Python-Skripten zur Analyse von Social-Media-Profilen (Instagram, Facebook, TikTok, u.a.).
 
 ## ⚠️ Wichtige Hinweise
 

@@ -65,8 +65,8 @@ print("TEST ABGESCHLOSSEN".center(80))
 print("="*80)
 
 if __name__ == '__main__':
-    # Prüfe, ob Configs erstellt wurden
-    config_dir = r'c:\Users\MoMo-Bln\Downloads\Music\ig\config'
+    # Prüfe, ob Configs erstellt wurden (neuer Unterordner)
+    config_dir = r'c:\Users\MoMo-Bln\Downloads\Music\ig\Social Media Analyse Tool J+C\config'
     if os.path.exists(config_dir):
         configs = [f for f in os.listdir(config_dir) if f.endswith('_config.json')]
         print(f"\n[OK] {len(configs)} Konfigurationsdatei(en) erstellt:")

@@ -1,4 +1,4 @@
-# 🎯 INSTAGRAM & FACEBOOK SCRAPER TOOLKIT - FINAL SUMMARY
+# 🎯 Social Media Analyse Tool J+C - FINAL SUMMARY
 
 ## ✅ WAS DU ERHALTEN HAST
 
@@ -26,7 +26,7 @@ c:\Users\MoMo-Bln\Downloads\Music\ig\
 └── threads/
 
 [KONFIGURATION & INFRASTRUKTUR]
-├── config/
+├── Social Media Analyse Tool J+C/config/
 │   ├── instagram_config.json
 │   ├── facebook_config.json
 │   ├── tiktok_config.json
@@ -171,7 +171,7 @@ python main.py
 → [6] Konfiguration bearbeiten
 ```
 
-Oder bearbeite JSON-Dateien direkt im `config/`-Ordner:
+Oder bearbeite JSON-Dateien direkt im `Social Media Analyse Tool J+C/config/`-Ordner:
 - `instagram_config.json` - Instagram-Einstellungen
 - `facebook_config.json` - Facebook-Einstellungen
 - Weitere für TikTok, Pinterest, Tumblr
